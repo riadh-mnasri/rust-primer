@@ -97,9 +97,18 @@ export default async function HomePage({
                 {t("home.projectTitle")}
               </h2>
             </div>
-            <p className="leading-relaxed" style={{ color: "var(--foreground-muted)" }}>
-              {pick(projectPitch, locale)}
-            </p>
+            <div className="flex flex-col gap-3">
+              <p className="leading-relaxed" style={{ color: "var(--foreground-muted)" }}>
+                {pick(projectPitch, locale)}
+              </p>
+              <a
+                href="https://github.com/riadh-mnasri/riskforge"
+                className="w-fit font-mono text-sm font-medium underline-offset-4 hover:underline"
+                style={{ color: "var(--accent)" }}
+              >
+                {t("home.projectRepo")} ↗
+              </a>
+            </div>
           </div>
 
           <ol className="relative grid gap-3 sm:grid-cols-2 lg:grid-cols-5">

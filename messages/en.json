@@ -25,7 +25,8 @@
     "projectStepPlanned": "Coming soon",
     "statModules": "modules",
     "statLessons": "lessons available",
-    "statProject": "project steps"
+    "statProject": "project steps",
+    "projectRepo": "Workbook on GitHub"
   },
   "module": {
     "lessonsCount": "{count, plural, one {# lesson} other {# lessons}}",

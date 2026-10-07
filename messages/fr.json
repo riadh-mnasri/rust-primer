@@ -25,7 +25,8 @@
     "projectStepPlanned": "À venir",
     "statModules": "modules",
     "statLessons": "leçons disponibles",
-    "statProject": "étapes de projet"
+    "statProject": "étapes de projet",
+    "projectRepo": "Cahier d'exercices sur GitHub"
   },
   "module": {
     "lessonsCount": "{count, plural, one {# leçon} other {# leçons}}",
