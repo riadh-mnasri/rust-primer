@@ -52,7 +52,15 @@ export default async function LessonPage({
         >
           {pick(module.title, locale)}
         </p>
-        <h1 className="text-3xl font-bold tracking-tight">
+        {lesson.kind === "project" && (
+          <span
+            className="w-fit rounded-full px-2.5 py-1 font-mono text-[11px] font-semibold uppercase tracking-wider"
+            style={{ background: "var(--copper-soft)", color: "var(--copper)" }}
+          >
+            {t("lesson.projectBadge")} · riskforge
+          </span>
+        )}
+        <h1 className="font-serif text-3xl font-semibold tracking-tight sm:text-4xl">
           {pick(lesson.title, locale)}
         </h1>
       </div>

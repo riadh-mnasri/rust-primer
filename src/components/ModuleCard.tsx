@@ -24,17 +24,13 @@ export function ModuleCard({
 
   const content = (
     <div
-      className="flex flex-col gap-3 rounded-xl border p-5 transition-colors"
-      style={{
-        borderColor: "var(--border)",
-        background: "var(--surface)",
-        opacity: isPlanned ? 0.6 : 1,
-      }}
+      className={`card flex h-full flex-col gap-3 rounded-xl p-5 ${isPlanned ? "" : "lift"}`}
+      style={{ opacity: isPlanned ? 0.6 : 1 }}
     >
       <div className="flex items-start justify-between gap-3">
         <div className="flex items-center gap-3">
           <span
-            className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg text-sm font-semibold"
+            className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg font-mono text-sm font-semibold"
             style={{
               background: "var(--surface-muted)",
               color: "var(--foreground-muted)",
@@ -86,7 +82,7 @@ export function ModuleCard({
   }
 
   return (
-    <Link href={`/modules/${module.slug}`} className="block">
+    <Link href={`/modules/${module.slug}`} className="block h-full">
       {content}
     </Link>
   );

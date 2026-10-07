@@ -1,11 +1,18 @@
 import { pick } from "@/lib/bilingual";
 import { CodeBlock } from "./CodeBlock";
+import { RichText } from "./RichText";
 import type { LessonSection } from "@/content/types";
 
-const CALLOUT_STYLE: Record<string, { label: string; color: string }> = {
-  tip: { label: "💡", color: "var(--accent)" },
-  warning: { label: "⚠️", color: "var(--amber)" },
-  note: { label: "ℹ️", color: "var(--foreground-muted)" },
+const CALLOUT_STYLE: Record<string, { color: string; background: string }> = {
+  tip: { color: "var(--accent)", background: "var(--accent-soft)" },
+  warning: { color: "var(--copper)", background: "var(--copper-soft)" },
+  note: { color: "var(--foreground-muted)", background: "var(--surface-muted)" },
+};
+
+const CALLOUT_LABEL: Record<string, { fr: string; en: string }> = {
+  tip: { fr: "Astuce", en: "Tip" },
+  warning: { fr: "Attention", en: "Warning" },
+  note: { fr: "À noter", en: "Note" },
 };
 
 export function LessonSections({
@@ -16,12 +23,12 @@ export function LessonSections({
   locale: string;
 }) {
   return (
-    <div className="flex flex-col gap-5">
+    <div className="prose-inline flex flex-col gap-5">
       {sections.map((section, index) => {
         if (section.type === "text") {
           return (
-            <p key={index} className="leading-relaxed">
-              {pick(section.text, locale)}
+            <p key={index} className="text-[17px] leading-relaxed">
+              <RichText text={pick(section.text, locale)} />
             </p>
           );
         }
@@ -29,13 +36,10 @@ export function LessonSections({
         if (section.type === "code") {
           return (
             <figure key={index} className="flex flex-col gap-2">
-              <CodeBlock code={section.code} />
+              <CodeBlock code={section.code} label={section.label} />
               {section.caption && (
-                <figcaption
-                  className="text-sm"
-                  style={{ color: "var(--foreground-muted)" }}
-                >
-                  {pick(section.caption, locale)}
+                <figcaption className="text-sm" style={{ color: "var(--foreground-muted)" }}>
+                  <RichText text={pick(section.caption, locale)} />
                 </figcaption>
               )}
             </figure>
@@ -44,17 +48,21 @@ export function LessonSections({
 
         const style = CALLOUT_STYLE[section.variant];
         return (
-          <div
+          <aside
             key={index}
-            className="flex gap-3 rounded-lg border-l-4 p-4 text-sm"
-            style={{
-              borderColor: style.color,
-              background: "var(--surface-muted)",
-            }}
+            className="flex flex-col gap-1 rounded-xl border-l-4 px-4 py-3 text-[15px] leading-relaxed"
+            style={{ borderColor: style.color, background: style.background }}
           >
-            <span aria-hidden>{style.label}</span>
-            <p>{pick(section.text, locale)}</p>
-          </div>
+            <span
+              className="font-mono text-[11px] font-semibold uppercase tracking-[0.14em]"
+              style={{ color: style.color }}
+            >
+              {pick(CALLOUT_LABEL[section.variant], locale)}
+            </span>
+            <p>
+              <RichText text={pick(section.text, locale)} />
+            </p>
+          </aside>
         );
       })}
     </div>

@@ -15,24 +15,35 @@ export function LessonList({ module }: { module: Module }) {
     <ol className="flex flex-col gap-3">
       {module.lessons.map((lesson, index) => {
         const done = isCompleted(lesson.id);
+        const isProject = lesson.kind === "project";
         return (
           <li key={lesson.id}>
             <Link
               href={`/modules/${module.slug}/${lesson.slug}`}
-              className="flex items-center gap-4 rounded-xl border p-4 transition-colors hover:opacity-90"
-              style={{ borderColor: "var(--border)", background: "var(--surface)" }}
+              className="card lift flex items-center gap-4 rounded-xl p-4"
+              style={isProject ? { borderLeft: "3px solid var(--copper)" } : undefined}
             >
               <span
                 className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full text-sm font-semibold"
                 style={{
-                  background: done ? "var(--accent)" : "var(--surface-muted)",
-                  color: done ? "var(--accent-foreground)" : "var(--foreground-muted)",
+                  background: done ? "var(--accent)" : isProject ? "var(--copper-soft)" : "var(--surface-muted)",
+                  color: done ? "var(--accent-foreground)" : isProject ? "var(--copper)" : "var(--foreground-muted)",
                 }}
               >
-                {done ? "✓" : index + 1}
+                {done ? "✓" : isProject ? "◆" : index + 1}
               </span>
               <div className="flex flex-col">
-                <span className="font-medium">{pick(lesson.title, locale)}</span>
+                <span className="flex flex-wrap items-center gap-2 font-medium">
+                  {pick(lesson.title, locale)}
+                  {isProject && (
+                    <span
+                      className="rounded-full px-2 py-0.5 font-mono text-[10px] font-semibold uppercase tracking-wider"
+                      style={{ background: "var(--copper-soft)", color: "var(--copper)" }}
+                    >
+                      {t("lesson.projectBadge")}
+                    </span>
+                  )}
+                </span>
                 <span className="text-sm" style={{ color: "var(--foreground-muted)" }}>
                   {pick(lesson.summary, locale)}
                 </span>

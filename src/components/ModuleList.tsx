@@ -25,8 +25,7 @@ export function ModuleList({
   return (
     <div className="flex flex-col gap-8">
       <div
-        className="rounded-xl border p-5"
-        style={{ borderColor: "var(--border)", background: "var(--surface)" }}
+        className="card rounded-xl p-5"
       >
         <div className="mb-3 flex items-center justify-between">
           <h2 className="font-semibold">{t("home.progressTitle")}</h2>
@@ -43,8 +42,8 @@ export function ModuleList({
       </div>
 
       <div>
-        <h2 className="mb-4 font-semibold">{t("home.modulesTitle")}</h2>
-        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+        <h2 className="mb-4 font-serif text-2xl font-semibold tracking-tight">{t("home.modulesTitle")}</h2>
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {modules.map((currentModule, index) => (
             <ModuleCard
               key={currentModule.id}
