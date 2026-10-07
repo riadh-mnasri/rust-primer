@@ -1,0 +1,55 @@
+{
+  "site": {
+    "name": "RustPrimer",
+    "tagline": "Apprendre Rust, de zéro à la prod."
+  },
+  "nav": {
+    "home": "Accueil",
+    "modules": "Modules"
+  },
+  "language": {
+    "label": "Langue",
+    "fr": "Français",
+    "en": "English"
+  },
+  "home": {
+    "heroTitle": "Apprends Rust de zéro en construisant un vrai moteur de calcul",
+    "heroSubtitle": "Un parcours progressif et bilingue : chaque notion expliquée simplement, des exercices corrigés, et un projet fil rouge qui grandit avec toi jusqu'à un moteur Monte Carlo de risque appelable depuis Kotlin.",
+    "heroCta": "Commencer le module 1",
+    "progressTitle": "Ta progression",
+    "progressEmpty": "Tu n'as pas encore commencé. Lance-toi sur la première leçon !",
+    "modulesTitle": "Modules du parcours",
+    "heroSecondary": "Voir le projet fil rouge",
+    "projectEyebrow": "Projet fil rouge",
+    "projectTitle": "riskforge, étape par étape",
+    "projectStepPlanned": "À venir",
+    "statModules": "modules",
+    "statLessons": "leçons disponibles",
+    "statProject": "étapes de projet"
+  },
+  "module": {
+    "lessonsCount": "{count, plural, one {# leçon} other {# leçons}}",
+    "statusAvailable": "Disponible",
+    "statusPlanned": "Bientôt disponible",
+    "backToModules": "Retour aux modules",
+    "startModule": "Commencer",
+    "continueModule": "Continuer",
+    "reviewModule": "Revoir"
+  },
+  "lesson": {
+    "backToModule": "Retour au module",
+    "markDone": "Marquer comme terminée",
+    "markNotDone": "Marquer comme non terminée",
+    "completed": "Leçon terminée",
+    "exerciseTitle": "À toi de jouer",
+    "revealSolution": "Voir la solution",
+    "hideSolution": "Masquer la solution",
+    "prevLesson": "Leçon précédente",
+    "nextLesson": "Leçon suivante",
+    "nextModule": "Module suivant",
+    "projectBadge": "Fil rouge"
+  },
+  "footer": {
+    "copyright": "© {year} <a>Riadh MNASRI</a>"
+  }
+}

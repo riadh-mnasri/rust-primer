@@ -1,0 +1,55 @@
+{
+  "site": {
+    "name": "RustPrimer",
+    "tagline": "Learn Rust, from zero to production."
+  },
+  "nav": {
+    "home": "Home",
+    "modules": "Modules"
+  },
+  "language": {
+    "label": "Language",
+    "fr": "Français",
+    "en": "English"
+  },
+  "home": {
+    "heroTitle": "Learn Rust from scratch by building a real computation engine",
+    "heroSubtitle": "A progressive, bilingual course: every notion explained simply, exercises with solutions, and a running project that grows with you into a Monte Carlo risk engine callable from Kotlin.",
+    "heroCta": "Start module 1",
+    "progressTitle": "Your progress",
+    "progressEmpty": "You haven't started yet. Jump into the first lesson!",
+    "modulesTitle": "Course modules",
+    "heroSecondary": "See the running project",
+    "projectEyebrow": "Running project",
+    "projectTitle": "riskforge, step by step",
+    "projectStepPlanned": "Coming soon",
+    "statModules": "modules",
+    "statLessons": "lessons available",
+    "statProject": "project steps"
+  },
+  "module": {
+    "lessonsCount": "{count, plural, one {# lesson} other {# lessons}}",
+    "statusAvailable": "Available",
+    "statusPlanned": "Coming soon",
+    "backToModules": "Back to modules",
+    "startModule": "Start",
+    "continueModule": "Continue",
+    "reviewModule": "Review"
+  },
+  "lesson": {
+    "backToModule": "Back to module",
+    "markDone": "Mark as done",
+    "markNotDone": "Mark as not done",
+    "completed": "Lesson completed",
+    "exerciseTitle": "Your turn",
+    "revealSolution": "Show solution",
+    "hideSolution": "Hide solution",
+    "prevLesson": "Previous lesson",
+    "nextLesson": "Next lesson",
+    "nextModule": "Next module",
+    "projectBadge": "Running project"
+  },
+  "footer": {
+    "copyright": "© {year} <a>Riadh MNASRI</a>"
+  }
+}

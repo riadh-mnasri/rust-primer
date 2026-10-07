@@ -1,0 +1,145 @@
+@import "tailwindcss";
+
+/* Palette "forge" : acier bleu-gris et cuivre sur papier froid / ardoise. */
+:root {
+  --background: #f3f1ec;
+  --surface: #ffffff;
+  --surface-muted: #e9e6df;
+  --foreground: #19212b;
+  --foreground-muted: #5a6573;
+  --border: #dbd6cc;
+  --accent: #2c5878;
+  --accent-foreground: #ffffff;
+  --accent-soft: #dce7f0;
+  --copper: #b0532a;
+  --copper-soft: #f6e1d4;
+  --amber: #b0532a;
+  --amber-soft: #f6e1d4;
+  --grid-line: rgba(25, 33, 43, 0.06);
+  --shadow: 0 1px 2px rgba(25, 33, 43, 0.05), 0 8px 24px -12px rgba(25, 33, 43, 0.18);
+  --code-bg: #141a21;
+  --code-fg: #d9e1ea;
+  --code-keyword: #e59a6b;
+  --code-type: #8fc1e3;
+  --code-string: #b5d38c;
+  --code-comment: #6f7d8c;
+  --code-number: #e8c27a;
+  --code-func: #f1d7a8;
+  --code-macro: #d58ad1;
+  --code-attr: #8c9aab;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0e1318;
+    --surface: #151c23;
+    --surface-muted: #1c242d;
+    --foreground: #e7ecf1;
+    --foreground-muted: #93a1b0;
+    --border: #27313c;
+    --accent: #7fb3d8;
+    --accent-foreground: #0b1620;
+    --accent-soft: #1a2b3a;
+    --copper: #e48b57;
+    --copper-soft: #3a2116;
+    --amber: #e48b57;
+    --amber-soft: #3a2116;
+    --grid-line: rgba(231, 236, 241, 0.05);
+    --shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 10px 30px -12px rgba(0, 0, 0, 0.6);
+    --code-bg: #0a0f14;
+  }
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-surface: var(--surface);
+  --color-surface-muted: var(--surface-muted);
+  --color-foreground: var(--foreground);
+  --color-foreground-muted: var(--foreground-muted);
+  --color-border: var(--border);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-copper: var(--copper);
+  --color-copper-soft: var(--copper-soft);
+  --color-amber: var(--amber);
+  --color-amber-soft: var(--amber-soft);
+  --font-sans: var(--font-plex-sans);
+  --font-serif: var(--font-plex-serif);
+  --font-mono: var(--font-plex-mono);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+}
+
+::selection {
+  background: var(--copper);
+  color: #ffffff;
+}
+
+/* Quadrillage discret, façon papier millimétré d'ingénieur. */
+.blueprint {
+  background-image:
+    linear-gradient(var(--grid-line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+}
+
+.lift {
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease,
+    border-color 180ms ease;
+}
+
+.lift:hover {
+  transform: translateY(-2px);
+  border-color: color-mix(in srgb, var(--accent) 45%, var(--border));
+}
+
+.lift:active {
+  transform: translateY(0);
+}
+
+.prose-inline code {
+  font-family: var(--font-mono), monospace;
+  font-size: 0.9em;
+  padding: 0.1em 0.35em;
+  border-radius: 4px;
+  background: var(--surface-muted);
+  color: var(--copper);
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.rise {
+  animation: rise 420ms ease-out both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .rise,
+  .lift {
+    animation: none;
+    transition: none;
+  }
+  .lift:hover {
+    transform: none;
+  }
+}
