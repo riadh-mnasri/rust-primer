@@ -2,15 +2,6 @@ import type { Module } from "../types";
 
 const planned: Array<Pick<Module, "id" | "slug" | "title" | "description">> = [
   {
-    id: "structs-enums",
-    slug: "structs-enums",
-    title: { fr: "Structs, enums et pattern matching", en: "Structs, enums and pattern matching" },
-    description: {
-      fr: "Modéliser un domaine avec des types précis, et laisser match vérifier chaque cas.",
-      en: "Model a domain with precise types, and let match check every case.",
-    },
-  },
-  {
     id: "collections",
     slug: "collections",
     title: { fr: "Collections", en: "Collections" },
