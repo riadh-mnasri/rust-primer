@@ -3,6 +3,7 @@ import { basics } from "./modules/basics";
 import { ownership } from "./modules/ownership";
 import { structsEnums } from "./modules/structs-enums";
 import { collections } from "./modules/collections";
+import { errorHandling } from "./modules/error-handling";
 import { plannedModules } from "./modules/planned";
 import type { Lesson, Module } from "./types";
 
@@ -12,6 +13,7 @@ export const curriculum: Module[] = [
   ownership,
   structsEnums,
   collections,
+  errorHandling,
   ...plannedModules,
 ];
 

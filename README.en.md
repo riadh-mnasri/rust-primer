@@ -47,7 +47,7 @@ Course content is kept apart from the rendering engine, in `src/content/`:
 - `project.ts`: the riskforge milestones shown on the home page.
 - `curriculum.ts`: assembles the modules and exposes navigation.
 
-Written modules: Getting started, Language basics, Ownership and borrowing, Structs, enums and pattern matching, Collections (22 lessons, including 5 project steps). The other modules exist as metadata (`planned` status) and will be written over the next iterations.
+Written modules: Getting started, Language basics, Ownership and borrowing, Structs, enums and pattern matching, Collections, Error handling (27 lessons, including 6 project steps). The other modules exist as metadata (`planned` status) and will be written over the next iterations.
 
 Every Rust snippet containing a `main` is compiled and run with `rustc` before publishing; only the starter code of "fix this code" exercises fails on purpose.
 
@@ -75,7 +75,7 @@ Planned on [Vercel](https://vercel.com): every push to `main` triggers a product
 - [x] Modules 1 to 3 and their project steps
 - [x] Structs, enums and pattern matching
 - [x] Collections
-- [ ] Error handling
+- [x] Error handling
 - [ ] Traits and generics, closures and iterators
 - [ ] Lifetimes, tests and benchmarks, smart pointers
 - [ ] Concurrency, async, FFI and JVM interop

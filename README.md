@@ -47,7 +47,7 @@ Le contenu pédagogique est séparé du moteur d'affichage, dans `src/content/` 
 - `project.ts` : les étapes du projet riskforge affichées sur la page d'accueil.
 - `curriculum.ts` : assemble les modules et expose la navigation.
 
-Modules rédigés : Prise en main, Les bases du langage, Ownership et emprunts, Structs, enums et pattern matching, Collections (22 leçons, dont 5 étapes fil rouge). Les autres modules existent en métadonnées (statut `planned`) et seront rédigés au fil des itérations.
+Modules rédigés : Prise en main, Les bases du langage, Ownership et emprunts, Structs, enums et pattern matching, Collections, Gestion des erreurs (27 leçons, dont 6 étapes fil rouge). Les autres modules existent en métadonnées (statut `planned`) et seront rédigés au fil des itérations.
 
 Tous les extraits Rust contenant un `main` sont compilés et exécutés avec `rustc` avant publication ; seuls les codes de départ d'exercices « corrige ce code » échouent volontairement.
 
@@ -75,7 +75,7 @@ Prévu sur [Vercel](https://vercel.com) : chaque push sur `main` déclenche un d
 - [x] Modules 1 à 3 et leurs étapes fil rouge
 - [x] Structs, enums et pattern matching
 - [x] Collections
-- [ ] Gestion des erreurs
+- [x] Gestion des erreurs
 - [ ] Traits et génériques, closures et itérateurs
 - [ ] Lifetimes, tests et benchmarks, smart pointers
 - [ ] Concurrence, async, FFI et interop JVM

@@ -2,15 +2,6 @@ import type { Module } from "../types";
 
 const planned: Array<Pick<Module, "id" | "slug" | "title" | "description">> = [
   {
-    id: "error-handling",
-    slug: "error-handling",
-    title: { fr: "Gestion des erreurs", en: "Error handling" },
-    description: {
-      fr: "Option, Result et l'opérateur ? : des erreurs visibles dans les types, sans exceptions.",
-      en: "Option, Result and the ? operator: errors visible in the types, no exceptions.",
-    },
-  },
-  {
     id: "traits-generics",
     slug: "traits-generics",
     title: { fr: "Traits et génériques", en: "Traits and generics" },
