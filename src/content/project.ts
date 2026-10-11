@@ -47,6 +47,14 @@ export const milestones: Milestone[] = [
     },
   },
   {
+    moduleId: "collections",
+    title: { fr: "Portefeuille", en: "Portfolio" },
+    deliverable: {
+      fr: "Trades rangés par contrepartie dans une HashMap de netting sets, rapport trié.",
+      en: "Trades filed by counterparty in a HashMap of netting sets, sorted report.",
+    },
+  },
+  {
     moduleId: "error-handling",
     title: { fr: "Charger un portefeuille", en: "Load a portfolio" },
     deliverable: {

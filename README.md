@@ -14,6 +14,7 @@ Chaque module se termine par une leçon « Fil rouge » qui applique les notions
 | Les bases du langage | Exposition positive et exposition attendue (EE) |
 | Ownership et emprunts | Fonctions qui empruntent les scénarios, zéro copie |
 | Structs, enums | Modèle métier : Trade, NettingSet |
+| Collections | Portefeuille multi-contreparties (HashMap de netting sets) |
 | Gestion des erreurs | Chargement d'un portefeuille CSV sans panic |
 | Traits et génériques | Modèles de diffusion interchangeables (GBM, Hull-White) |
 | Closures et itérateurs | Profils EE, PFE 97,5 %, EPE |
@@ -46,7 +47,7 @@ Le contenu pédagogique est séparé du moteur d'affichage, dans `src/content/` 
 - `project.ts` : les étapes du projet riskforge affichées sur la page d'accueil.
 - `curriculum.ts` : assemble les modules et expose la navigation.
 
-Modules rédigés : Prise en main, Les bases du langage, Ownership et emprunts, Structs, enums et pattern matching (18 leçons, dont 4 étapes fil rouge). Les autres modules existent en métadonnées (statut `planned`) et seront rédigés au fil des itérations.
+Modules rédigés : Prise en main, Les bases du langage, Ownership et emprunts, Structs, enums et pattern matching, Collections (22 leçons, dont 5 étapes fil rouge). Les autres modules existent en métadonnées (statut `planned`) et seront rédigés au fil des itérations.
 
 Tous les extraits Rust contenant un `main` sont compilés et exécutés avec `rustc` avant publication ; seuls les codes de départ d'exercices « corrige ce code » échouent volontairement.
 
@@ -73,7 +74,8 @@ Prévu sur [Vercel](https://vercel.com) : chaque push sur `main` déclenche un d
 
 - [x] Modules 1 à 3 et leurs étapes fil rouge
 - [x] Structs, enums et pattern matching
-- [ ] Collections, gestion des erreurs
+- [x] Collections
+- [ ] Gestion des erreurs
 - [ ] Traits et génériques, closures et itérateurs
 - [ ] Lifetimes, tests et benchmarks, smart pointers
 - [ ] Concurrence, async, FFI et interop JVM

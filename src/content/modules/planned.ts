@@ -2,15 +2,6 @@ import type { Module } from "../types";
 
 const planned: Array<Pick<Module, "id" | "slug" | "title" | "description">> = [
   {
-    id: "collections",
-    slug: "collections",
-    title: { fr: "Collections", en: "Collections" },
-    description: {
-      fr: "Vec, String et HashMap : les structures de données du quotidien.",
-      en: "Vec, String and HashMap: the everyday data structures.",
-    },
-  },
-  {
     id: "error-handling",
     slug: "error-handling",
     title: { fr: "Gestion des erreurs", en: "Error handling" },

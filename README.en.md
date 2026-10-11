@@ -14,6 +14,7 @@ Every module ends with a "Running project" lesson that applies the module's noti
 | Language basics | Positive exposure and expected exposure (EE) |
 | Ownership and borrowing | Functions that borrow scenarios, zero copies |
 | Structs, enums | Domain model: Trade, NettingSet |
+| Collections | Multi-counterparty portfolio (HashMap of netting sets) |
 | Error handling | Loading a CSV portfolio without panics |
 | Traits and generics | Interchangeable diffusion models (GBM, Hull-White) |
 | Closures and iterators | EE, 97.5% PFE and EPE profiles |
@@ -46,7 +47,7 @@ Course content is kept apart from the rendering engine, in `src/content/`:
 - `project.ts`: the riskforge milestones shown on the home page.
 - `curriculum.ts`: assembles the modules and exposes navigation.
 
-Written modules: Getting started, Language basics, Ownership and borrowing, Structs, enums and pattern matching (18 lessons, including 4 project steps). The other modules exist as metadata (`planned` status) and will be written over the next iterations.
+Written modules: Getting started, Language basics, Ownership and borrowing, Structs, enums and pattern matching, Collections (22 lessons, including 5 project steps). The other modules exist as metadata (`planned` status) and will be written over the next iterations.
 
 Every Rust snippet containing a `main` is compiled and run with `rustc` before publishing; only the starter code of "fix this code" exercises fails on purpose.
 
@@ -73,7 +74,8 @@ Planned on [Vercel](https://vercel.com): every push to `main` triggers a product
 
 - [x] Modules 1 to 3 and their project steps
 - [x] Structs, enums and pattern matching
-- [ ] Collections, error handling
+- [x] Collections
+- [ ] Error handling
 - [ ] Traits and generics, closures and iterators
 - [ ] Lifetimes, tests and benchmarks, smart pointers
 - [ ] Concurrency, async, FFI and JVM interop
