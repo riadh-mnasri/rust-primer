@@ -2,15 +2,6 @@ import type { Module } from "../types";
 
 const planned: Array<Pick<Module, "id" | "slug" | "title" | "description">> = [
   {
-    id: "traits-generics",
-    slug: "traits-generics",
-    title: { fr: "Traits et génériques", en: "Traits and generics" },
-    description: {
-      fr: "Le polymorphisme à la Rust : des comportements partagés, sans coût à l'exécution.",
-      en: "Polymorphism the Rust way: shared behavior, with zero runtime cost.",
-    },
-  },
-  {
     id: "closures-iterators",
     slug: "closures-iterators",
     title: { fr: "Closures et itérateurs", en: "Closures and iterators" },

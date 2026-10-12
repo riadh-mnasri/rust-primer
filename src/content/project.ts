@@ -66,8 +66,8 @@ export const milestones: Milestone[] = [
     moduleId: "traits-generics",
     title: { fr: "Modèles de diffusion", en: "Diffusion models" },
     deliverable: {
-      fr: "Un trait commun pour GBM et Hull-White, interchangeables dans le moteur.",
-      en: "A shared trait for GBM and Hull-White, interchangeable in the engine.",
+      fr: "Un trait commun pour GBM et retour à la moyenne (Ornstein-Uhlenbeck), et une première simulation Monte Carlo.",
+      en: "A shared trait for GBM and mean reversion (Ornstein-Uhlenbeck), and a first Monte Carlo simulation.",
     },
   },
   {

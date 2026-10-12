@@ -4,6 +4,7 @@ import { ownership } from "./modules/ownership";
 import { structsEnums } from "./modules/structs-enums";
 import { collections } from "./modules/collections";
 import { errorHandling } from "./modules/error-handling";
+import { traitsGenerics } from "./modules/traits-generics";
 import { plannedModules } from "./modules/planned";
 import type { Lesson, Module } from "./types";
 
@@ -14,6 +15,7 @@ export const curriculum: Module[] = [
   structsEnums,
   collections,
   errorHandling,
+  traitsGenerics,
   ...plannedModules,
 ];
 

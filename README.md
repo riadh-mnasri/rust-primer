@@ -16,7 +16,7 @@ Chaque module se termine par une leçon « Fil rouge » qui applique les notions
 | Structs, enums | Modèle métier : Trade, NettingSet |
 | Collections | Portefeuille multi-contreparties (HashMap de netting sets) |
 | Gestion des erreurs | Chargement d'un portefeuille CSV sans panic |
-| Traits et génériques | Modèles de diffusion interchangeables (GBM, Hull-White) |
+| Traits et génériques | Modèles de diffusion interchangeables (GBM, Ornstein-Uhlenbeck) |
 | Closures et itérateurs | Profils EE, PFE 97,5 %, EPE |
 | Modules, tests, benchmarks | Tests, comparaison avec Kotlin, criterion |
 | Concurrence | Parallélisation avec rayon |
@@ -47,7 +47,7 @@ Le contenu pédagogique est séparé du moteur d'affichage, dans `src/content/` 
 - `project.ts` : les étapes du projet riskforge affichées sur la page d'accueil.
 - `curriculum.ts` : assemble les modules et expose la navigation.
 
-Modules rédigés : Prise en main, Les bases du langage, Ownership et emprunts, Structs, enums et pattern matching, Collections, Gestion des erreurs (27 leçons, dont 6 étapes fil rouge). Les autres modules existent en métadonnées (statut `planned`) et seront rédigés au fil des itérations.
+Modules rédigés : Prise en main, Les bases du langage, Ownership et emprunts, Structs, enums et pattern matching, Collections, Gestion des erreurs, Traits et génériques (32 leçons, dont 7 étapes fil rouge). Les autres modules existent en métadonnées (statut `planned`) et seront rédigés au fil des itérations.
 
 Tous les extraits Rust contenant un `main` sont compilés et exécutés avec `rustc` avant publication ; seuls les codes de départ d'exercices « corrige ce code » échouent volontairement.
 
@@ -76,7 +76,8 @@ Prévu sur [Vercel](https://vercel.com) : chaque push sur `main` déclenche un d
 - [x] Structs, enums et pattern matching
 - [x] Collections
 - [x] Gestion des erreurs
-- [ ] Traits et génériques, closures et itérateurs
+- [x] Traits et génériques
+- [ ] Closures et itérateurs
 - [ ] Lifetimes, tests et benchmarks, smart pointers
 - [ ] Concurrence, async, FFI et interop JVM
 
